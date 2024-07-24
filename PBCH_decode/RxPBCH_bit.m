@@ -7,7 +7,6 @@ RxdeScrambDataOut = RxBCHdeScramb1(RxPBCH_demodQPSK_out,PBCH_i,N_cell_ID,Rx_pbch
 %% De RateMatching
 de_rate_matching_out = DeRatematchingForPolar(RxdeScrambDataOut,512);
 %% Bit Reorder and Decode
-%注：IP核不需要添加bit reorder
 % % index = bit_re_order(512);
 % % de_rate_matching_out = de_rate_matching_out(index);
 % % polar_decoding_out = Polar_decoding(de_rate_matching_out,2,PBCH_CRC_len,I_IL);%polar_decoding%恢复正常
